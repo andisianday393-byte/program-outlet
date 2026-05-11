@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Sahabat MOBO - IM3</title>
+    <style>
+        /* Desain Modern & Clean Terinspirasi Web Resmi */
+        :root {
+            --im3-yellow: #FFD100;
+            --im3-red: #E30613;
+            --im3-dark: #1A1A1A;
+            --bg-gray: #F7F7F7;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: var(--im3-dark);
+            line-height: 1.5;
+        }
+
+        /* Header dengan logo tengah seperti di screenshot */
+        header {
+            background-color: var(--im3-yellow);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 500px; /* Ukuran pas untuk mobile */
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Hero section lebih rapi */
+        .hero-section {
+            text-align: center;
+            padding: 20px 0 30px;
+        }
+
+        .hero-section h1 {
+            color: var(--im3-red);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-section p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Kartu Desain "Soft Card" seperti di screenshot */
+        .card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card-img {
+            width: 100%;
+            display: block;
+            background: #eee;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .badge-periode {
+            background: var(--im3-red);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--im3-red);
+            margin-bottom: 8px;
+        }
+
+        .cashback-hero {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 10px 0;
+            color: var(--im3-dark);
+        }
+
+        /* List dengan icon ceklis hijau bersih */
+        .feature-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #24b512;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        /* Grid untuk Tag & Go */
+        .promo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .promo-box {
+            background: #F9F9F9;
+            padding: 15px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #EEE;
+        }
+
+        .promo-box strong { font-size: 0.85rem; color: #555; }
+        .promo-box .price { 
+            display: block; 
+            color: var(--im3-red); 
+            font-size: 1.2rem; 
+            font-weight: 800;
+            margin: 5px 0;
+        }
+        .promo-box small { font-size: 0.7rem; color: #888; }
+
+        /* Langkah-langkah Biometrik */
+        .step-box {
+            background: #FFFBE6;
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .step-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .step-item:last-child { margin-bottom: 0; }
+
+        .step-num {
+            background: var(--im3-red);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .step-text { font-size: 0.9rem; color: #333; }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.75rem;
+            color: #999;
+        }
+
+        .text-red { color: var(--im3-red); font-weight: bold; }
+
+        /* Mencegah gambar error merusak tampilan */
+        img[alt] { font-size: 0.7rem; color: #ccc; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img/im3.png" alt="IM3" style="height: 32px;">
+</header>
+
+<div class="container">
+    <div class="hero-section">
+        <h1>PROGRAM SAHABAT MOBO</h1>
+        <p>Edisi Mei 2026 • Outlet Jabotabek, Banten & Jawa Barat</p>
+    </div>
+
+    <div class="card">
+        <img src="img/cbsatupersen.jpeg" alt="Banner Rebuy Data" class="card-img" onerror="this.src='https://via.placeholder.com/600x300/FFD100/333?text=Program+Rebuy+Data'">
+        <div class="card-body">
+            <div class="badge-periode">8 - 31 Mei 2026</div>
+            <h2 class="card-title">Program Rebuy Data</h2>
+            <div class="cashback-hero">Cashback 1%</div>
+            <ul class="feature-list">
+                <li>Berlaku untuk <b>Rebuy Inner Data</b></li>
+                <li>Maksimum cashback hingga <span class="text-red">1.5 Juta</span></li>
+                <li>Saldo otomatis masuk di bulan berikutnya (M+1)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/cbtagging.png" alt="Banner Skema" class="card-img" onerror="this.src='https://via.placeholder.com/600x200/ed1c24/fff?text=Skema+Tag+and+Go'">
+        <div class="card-body">
+            <h2 class="card-title">Skema Tag & Go + Biometrik</h2>
+            <p style="font-size: 0.85rem; color: #666;">Khusus produk 3GB (Maks. 50 HIT/Bulan)</p>
+            
+            <div class="promo-grid">
+                <div class="promo-box">
+                    <strong>Tag & Go</strong>
+                    <span class="price">Rp 3.000</span>
+                    <small>Bayar Realtime</small>
+                </div>
+                <div class="promo-box" style="border-color: #24b512;">
+                    <strong>Biometrik</strong>
+                    <span class="price" style="color: #24b512;">Rp 5.000</span>
+                    <small>Bayar H+2</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/regisbiometrik.jpeg" alt="Banner Registrasi" class="card-img" onerror="this.src='https://via.placeholder.com/600x350/333/fff?text=Cara+Registrasi+Biometrik'">
+        <div class="card-body">
+            <h2 class="card-title">Registrasi Kartu Perdana</h2>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Lebih aman & praktis dengan foto wajah</p>
+            
+            <div class="step-box">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-text">Buka <b>ioh.co.id/reg</b> pilih menu Biometrik</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-text">Masukkan nomor IM3 yang didaftarkan</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-text">Verifikasi via OTP atau 4 digit ICCID</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">4</div>
+                    <div class="step-text">Lakukan <b>Foto Wajah</b> & verifikasi NIK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 Indosat Ooredoo Hutchison</p>
+        <p>Pajak cashback ditanggung sepenuhnya oleh outlet.</p>
+    </div>
+</div>
+
+</body>
+</html>
